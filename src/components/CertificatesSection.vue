@@ -64,10 +64,6 @@
               class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs text-white hover:bg-brand-purple hover:border-brand-purple transition-all duration-300">
               <i class="fas fa-expand text-[10px]"></i> View Full Preview
             </button>
-            <a :href="cert.credentialUrl" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-brand-teal/30 text-xs text-brand-teal hover:bg-brand-teal/10 hover:border-brand-teal transition-all duration-300">
-              <i class="fas fa-external-link-alt text-[10px]"></i> Verify Credential
-            </a>
           </div>
         </div>
       </div>

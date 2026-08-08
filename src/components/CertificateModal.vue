@@ -37,10 +37,6 @@
             {{ skill }}
           </span>
         </div>
-        <a :href="selectedCertificate.credentialUrl" target="_blank" rel="noopener noreferrer"
-          class="px-4 py-2 rounded-lg bg-brand-teal text-slate-950 font-bold hover:bg-brand-teal/90 transition-colors">
-          Verify Official Credential <i class="fas fa-external-link-alt ml-1 text-[10px]"></i>
-        </a>
       </div>
     </div>
   </div>
