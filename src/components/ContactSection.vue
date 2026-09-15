@@ -18,8 +18,7 @@
         <div class="border border-white/5 bg-slate-900/20 backdrop-blur-sm rounded-2xl p-6 space-y-4">
           <div class="text-sm font-bold text-white font-heading">Contact Details</div>
 
-          <div
-            class="flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors duration-200">
+          <div class="flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors duration-200">
             <div
               class="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-brand-purple">
               <i class="fas fa-envelope"></i>
@@ -31,15 +30,14 @@
             </div>
           </div>
 
-          <div
-            class="flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors duration-200">
+          <div class="flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors duration-200">
             <div
               class="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-brand-teal">
               <i class="fab fa-linkedin"></i>
             </div>
             <div>
               <div class="text-[10px] text-gray-500 font-mono">LINKEDIN PROFILE</div>
-              <a href="https://linkedin.com/in/sek-chamroeun" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/sek-chamroeun-264695390?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer"
                 class="font-medium text-gray-200 hover:underline">linkedin.com/in/sek-chamroeun</a>
             </div>
           </div>
@@ -70,11 +68,14 @@
           </div>
 
           <!-- Error Feedback Banner -->
-          <div v-if="formStatus === 'error'" class="p-3 bg-rose-500/10 border border-rose-500/30 rounded-xl text-rose-300 text-xs flex items-start gap-2.5">
+          <div v-if="formStatus === 'error'"
+            class="p-3 bg-rose-500/10 border border-rose-500/30 rounded-xl text-rose-300 text-xs flex items-start gap-2.5">
             <i class="fas fa-exclamation-circle text-rose-400 text-sm mt-0.5 shrink-0"></i>
             <div>
               <p class="font-semibold">{{ errorMessage }}</p>
-              <p class="text-[11px] text-rose-400/80 mt-0.5">Please check your <code class="bg-rose-950/50 px-1 py-0.5 rounded text-rose-200">.env</code> configuration or network connection.</p>
+              <p class="text-[11px] text-rose-400/80 mt-0.5">Please check your <code
+                  class="bg-rose-950/50 px-1 py-0.5 rounded text-rose-200">.env</code> configuration or network
+                connection.</p>
             </div>
           </div>
 

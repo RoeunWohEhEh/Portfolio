@@ -88,6 +88,12 @@ import certInternEtec from './assets/certificate_intern_etec.jpg'
 import certVue from './assets/cert_vue.png'
 import cvFile from './assets/SekChamroeun_CV.pdf'
 
+// Project Demo Images
+import projectMovie from './assets/project_movie.png'
+import projectProtectx from './assets/project_protectx.png'
+import projectKahoot from './assets/project_kahoot.png'
+import projectZando from './assets/project_zando.png'
+
 // Navigation links configuration
 const navLinks = [
   { name: 'home', href: '#home', id: 'home' },
@@ -155,46 +161,68 @@ const stats = [
 // Projects dataset
 const projects = ref([
   {
-    title: 'ChertNodes',
-    description: 'Sleek interface designed for Minecraft hosting platforms, providing developers with detailed charts and container operations.',
-    techStack: ['HTML', 'SCSS', 'Python', 'Flask'],
-    category: 'Fullstack',
-    imageBg: 'from-brand-purple to-indigo-700',
-    liveLink: '#'
-  },
-  {
-    title: 'ProtectX Dashboard',
-    description: 'Discord anti-crash bot web dashboard. Highly interactive configurations, live system statuses, and authorization logs.',
-    techStack: ['React', 'Express', 'Discord.js', 'Node.js'],
+    title: 'Website Movie',
+    description: 'A dynamic movie streaming platform built with Vue.js and integrated with the TMDB API. Users can explore trending movies, search for specific titles, view detailed movie information, and manage their personal favorites list.',
+    techStack: ['Vue.js', 'JavaScript', 'Bootstrap'],
     category: 'Frontend',
-    imageBg: 'from-brand-teal to-cyan-700',
-    liveLink: '#'
+    image: projectMovie,
+    imageBg: 'from-violet-900 to-indigo-950',
+    liveLink: 'https://vue-movie-app-roan.vercel.app/'
   },
   {
-    title: 'Kahoot Answers Viewer',
-    description: 'Real-time quiz analysis tool allowing visual answer trackers and immediate result visualizations.',
-    techStack: ['CSS', 'Express', 'Node.js'],
-    category: 'Tools',
-    imageBg: 'from-brand-pink to-rose-700',
-    liveLink: '#'
-  },
-  {
-    title: 'Aesthetic Portfolio UI',
-    description: 'The interactive prototype, custom animations, and layout mockups developed for this digital resume.',
-    techStack: ['Figma', 'Vite', 'TailwindCSS'],
-    category: 'Design',
+    title: 'Clone UI ZANDO',
+    description: 'Clonned UI ZANDO for learning purposes.',
+    techStack: ['HTML', 'CSS'],
+    category: 'Frontend',
+    image: projectZando,
     imageBg: 'from-indigo-600 to-brand-purple',
-    liveLink: '#'
+    liveLink: 'https://zando-lac.vercel.app/'
   }
 ])
 
 // Skills dataset
 const skills = ref({
-  Languages: ['TypeScript', 'JavaScript', 'Python', 'Lua', 'HTML/CSS'],
-  Frameworks: ['Vue 3', 'React.js', 'Vite', 'TailwindCSS', 'Flask', 'Express'],
-  Databases: ['PostgreSQL', 'SQLite', 'MongoDB', 'Redis'],
-  Tools: ['VSCode', 'Neovim', 'Git/GitHub', 'Figma', 'Linux'],
-  Others: ['REST APIs', 'UI Design', 'Responsive Layouts', 'SEO Standards']
+  Languages: [
+    'JavaScript',
+    'Dart',
+    'PHP',
+    'SQL',
+    'HTML/CSS',
+    'C/C++',
+    'Java'
+  ],
+
+  Frameworks: [
+    'Flutter',
+    'Laravel',
+    'Vue.js',
+    'Vue 3',
+    'Tailwind CSS'
+  ],
+
+  Databases: [
+    'MySQL',
+    'SQLite'
+  ],
+
+  Tools: [
+    'Git/GitHub',
+    'VS Code',
+    'Android Studio',
+    'Postman',
+    'XAMPP'
+  ],
+
+  Others: [
+    'REST APIs',
+    'Dio / HTTP',
+    'Laravel Sanctum',
+    'Firebase',
+    'Responsive UI',
+    'Basic Networking',
+    'IT Support',
+    'Software Support'
+  ]
 })
 
 // Certificates dataset
@@ -202,7 +230,7 @@ const certificates = ref([
   {
     id: 1,
     title: 'Youth Innovation Competition Award (Second Prize)',
-    issuer: 'International Organizing Committee of YICMG',
+    issuer: 'International Organizing Committee of YICMG 2026 | Wuhan University, China',
     date: 'July 2026',
     credentialUrl: '#',
     image: certYicmg,
@@ -212,7 +240,7 @@ const certificates = ref([
   {
     id: 2,
     title: 'Grand Prize & Best Project for Incubation Award',
-    issuer: 'International Organizing Committee of YICMG 2026',
+    issuer: 'International Organizing Committee of YICMG 2026 | Wuhan University, China',
     date: 'July 2026',
     credentialUrl: '#',
     image: certYicmgGrand,
