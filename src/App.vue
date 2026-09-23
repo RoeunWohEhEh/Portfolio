@@ -81,11 +81,9 @@ import Footer from './components/Footer.vue'
 // Asset Graphics
 import heroArtwork from './assets/hero_artwork.png'
 import aboutArtwork from './assets/about_artwork.png'
-import certFrontend from './assets/cert_frontend.png'
 import certYicmg from './assets/yicmg_certificate.PNG'
 import certYicmgGrand from './assets/yicmg_certificate_internaional_team.jpg'
 import certInternEtec from './assets/certificate_intern_etec.jpg'
-import certVue from './assets/cert_vue.png'
 import certFlutterEtec from './assets/flutter_course-etec.jpg'
 import certFrontendEtec from './assets/fontend_web_course_etec.jpg'
 import certJavaEtec from './assets/java_course-etec.jpg'
@@ -93,8 +91,6 @@ import cvFile from './assets/SekChamroeun_CV.pdf'
 
 // Project Demo Images
 import projectMovie from './assets/project_movie.png'
-import projectProtectx from './assets/project_protectx.png'
-import projectKahoot from './assets/project_kahoot.png'
 import projectZando from './assets/project_zando.png'
 import projectPOS from './assets/project_pos.png'
 
@@ -184,21 +180,33 @@ const projects = ref([
   },
   {
     title: 'POS Management System',
+
     description:
-      'A full-stack Point of Sale management system built with Vue.js and Laravel. The system provides product and category management, order processing, payment management, user authentication, and a KHQR payment integration for Cambodian digital payments.',
+      'A full-stack Point of Sale management system built with Vue.js and Laravel. The system includes product and category management, inventory tracking, order processing, cash and KHQR payments, role-based authentication, and REST API integration. The application is deployed using Vercel, Render, and Railway.',
+
     techStack: [
       'Vue.js',
       'Laravel',
       'MySQL',
       'REST API',
       'Sanctum',
-      'Bakong KHQR'
+      'Pinia',
+      'Axios',
+      'Bakong KHQR',
+      'Vercel',
+      'Render',
+      'Railway'
     ],
-    category: 'Full Stack',
+
+    category: 'Fullstack',
+
     image: projectPOS,
+
     imageBg: 'from-emerald-900 to-slate-950',
-    liveLink: '#',
+
+    liveLink: 'https://pos-system-frontend-seven.vercel.app/',
   }
+
 
 
 ])

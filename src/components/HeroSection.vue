@@ -80,7 +80,7 @@ defineProps({
 })
 
 // Typing Effect implementation
-const roles = ['Web Designer', 'Front-End Developer', 'UI/UX Designer']
+const roles = ['Web Designer', 'Front-End Developer']
 const currentRole = ref('')
 let roleIndex = 0
 let charIndex = 0
