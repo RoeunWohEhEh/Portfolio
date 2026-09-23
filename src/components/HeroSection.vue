@@ -18,7 +18,7 @@
         high-performance frontend interfaces.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-        <a :href="cvFile" download="SekChamroeun_CV.pdf"
+        <a v-if="false" :href="cvFile" download="SekChamroeun_CV.pdf"
           class="px-6 py-3 rounded-lg bg-gradient-to-r from-brand-purple to-brand-teal text-white font-semibold text-sm hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-center inline-flex items-center justify-center">
           Download CV <i class="fas fa-download ml-2 text-xs"></i>
         </a>

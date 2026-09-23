@@ -86,6 +86,9 @@ import certYicmg from './assets/yicmg_certificate.PNG'
 import certYicmgGrand from './assets/yicmg_certificate_internaional_team.jpg'
 import certInternEtec from './assets/certificate_intern_etec.jpg'
 import certVue from './assets/cert_vue.png'
+import certFlutterEtec from './assets/flutter_course-etec.jpg'
+import certFrontendEtec from './assets/fontend_web_course_etec.jpg'
+import certJavaEtec from './assets/java_course-etec.jpg'
 import cvFile from './assets/SekChamroeun_CV.pdf'
 
 // Project Demo Images
@@ -93,6 +96,7 @@ import projectMovie from './assets/project_movie.png'
 import projectProtectx from './assets/project_protectx.png'
 import projectKahoot from './assets/project_kahoot.png'
 import projectZando from './assets/project_zando.png'
+import projectPOS from './assets/project_pos.png'
 
 // Navigation links configuration
 const navLinks = [
@@ -177,7 +181,26 @@ const projects = ref([
     image: projectZando,
     imageBg: 'from-indigo-600 to-brand-purple',
     liveLink: 'https://zando-lac.vercel.app/'
+  },
+  {
+    title: 'POS Management System',
+    description:
+      'A full-stack Point of Sale management system built with Vue.js and Laravel. The system provides product and category management, order processing, payment management, user authentication, and a KHQR payment integration for Cambodian digital payments.',
+    techStack: [
+      'Vue.js',
+      'Laravel',
+      'MySQL',
+      'REST API',
+      'Sanctum',
+      'Bakong KHQR'
+    ],
+    category: 'Full Stack',
+    image: projectPOS,
+    imageBg: 'from-emerald-900 to-slate-950',
+    liveLink: '#',
   }
+
+
 ])
 
 // Skills dataset
@@ -259,23 +282,34 @@ const certificates = ref([
   },
   {
     id: 4,
-    title: 'Frontend Web Development Specialist Certificate',
-    issuer: 'ETEC Training Center',
-    date: '2025',
+    title: 'Frontend Web Development Course Certificate',
+    issuer: 'Engineering of Technology and Electronic Center (ETEC)',
+    date: 'June 15, 2026',
     credentialUrl: '#',
-    image: certFrontend,
-    skills: ['HTML5 & CSS3', 'JavaScript (ES6+)', 'Responsive Web Design', 'UI Components'],
-    description: 'Comprehensive certification in Frontend Web Development covering modern HTML, CSS, JavaScript, responsive layouts, and user interface development.'
+    image: certFrontendEtec,
+    skills: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'Vue.js', 'Web Projects'],
+    description: 'Successfully completed computer training courses in HTML, CSS, Bootstrap, JavaScript, VueJs, and Project Courses.'
   },
   {
     id: 5,
-    title: 'Vue.js 3 Certified Specialist',
-    issuer: 'Vue Mastery & Open JS',
-    date: '2024',
-    credentialUrl: 'https://vuemastery.com',
-    image: certVue,
-    skills: ['Vue 3 Composition API', 'Pinia State Management', 'Vite', 'Vue Router'],
-    description: 'Advanced specialization in Vue 3 architecture, reactive state management, custom directives, performance optimization, and modular component design.'
-  }
+    title: 'Mobile & Full-Stack Development Course Certificate',
+    issuer: 'Engineering of Technology and Electronic Center (ETEC)',
+    date: 'July 15, 2025',
+    credentialUrl: '#',
+    image: certFlutterEtec,
+    skills: ['Flutter', 'Dart', 'REST API', 'Laravel', 'Mobile App Development'],
+    description: 'Successfully completed computer training courses in Basic & Advanced Flutter, Dart, API integration, Laravel, and Project Courses.'
+  },
+  {
+    id: 6,
+    title: 'Java & Database Development Course Certificate',
+    issuer: 'Engineering of Technology and Electronic Center (ETEC)',
+    date: 'February 15, 2025',
+    credentialUrl: '#',
+    image: certJavaEtec,
+    skills: ['Java', 'MySQL', 'iReport', 'OOP', 'Backend Development'],
+    description: 'Successfully completed computer training courses in Basic & Advanced Java, MySQL database management, iReport, and Project Courses.'
+  },
+
 ])
 </script>

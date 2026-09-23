@@ -41,6 +41,18 @@
                 class="font-medium text-gray-200 hover:underline">linkedin.com/in/sek-chamroeun</a>
             </div>
           </div>
+
+          <div class="flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors duration-200">
+            <div
+              class="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-brand-pink">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <div class="text-[10px] text-gray-500 font-mono">PHONE NUMBER</div>
+              <a href="tel:+85512345678"
+                class="font-medium text-gray-200 hover:underline">+855 97 775 4614</a>
+            </div>
+          </div>
         </div>
       </div>
 
