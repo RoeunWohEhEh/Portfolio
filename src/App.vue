@@ -32,25 +32,25 @@
     <!-- Main Content Container -->
     <main class="max-w-6xl mx-auto px-6 pt-24 pb-12 relative z-10 space-y-32">
       <!-- Hero Section -->
-      <HeroSection :heroArtwork="heroArtwork" :cvFile="cvFile" />
+      <HeroSection data-aos="fade-up" data-aos-duration="1000" :heroArtwork="heroArtwork" :cvFile="cvFile" />
 
       <!-- Stats Metrics Section -->
-      <StatsSection :stats="stats" />
+      <StatsSection data-aos="fade-up" data-aos-delay="200" :stats="stats" />
 
       <!-- Projects Section -->
-      <ProjectsSection :projects="projects" />
+      <ProjectsSection data-aos="fade-up" data-aos-delay="200" :projects="projects" />
 
       <!-- Skills Section -->
-      <SkillsSection :skills="skills" />
+      <SkillsSection data-aos="fade-up" data-aos-delay="200" :skills="skills" />
 
       <!-- Certificates Section -->
-      <CertificatesSection :certificates="certificates" @open-modal="openCertificateModal" />
+      <CertificatesSection data-aos="fade-up" data-aos-delay="200" :certificates="certificates" @open-modal="openCertificateModal" />
 
       <!-- About Me Section -->
-      <AboutSection :aboutArtwork="aboutArtwork" />
+      <AboutSection data-aos="fade-up" data-aos-delay="200" :aboutArtwork="aboutArtwork" />
 
       <!-- Contacts Section -->
-      <ContactSection />
+      <ContactSection data-aos="fade-up" data-aos-delay="200" />
     </main>
 
     <!-- Certificate Lightbox Modal -->
@@ -64,6 +64,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import AOS from 'aos'
 
 // Components
 import SocialBar from './components/SocialBar.vue'
@@ -88,6 +89,11 @@ import certFlutterEtec from './assets/flutter_course-etec.jpg'
 import certFrontendEtec from './assets/fontend_web_course_etec.jpg'
 import certJavaEtec from './assets/java_course-etec.jpg'
 import cvFile from './assets/SekChamroeun_CV.pdf'
+
+// CCNA Certificates
+import certCcnaEnterprise from './assets/CCNA Enterprise Networking, Security, and Automation.png'
+import certCcnaSwitching from './assets/CCNA Switching, Routing, and Wireless Essentials.png'
+import certCcnaIntro from './assets/CCNA Introduction to Networks.png'
 
 // Project Demo Images
 import projectMovie from './assets/project_movie.png'
@@ -140,6 +146,12 @@ const handleKeydown = (e) => {
 }
 
 onMounted(() => {
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  })
   window.addEventListener('scroll', handleScroll)
   window.addEventListener('keydown', handleKeydown)
 })
@@ -152,10 +164,10 @@ onUnmounted(() => {
 
 // Key metrics stats
 const stats = [
-  { value: '3+', label: 'Years Experience' },
-  { value: '15+', label: 'Completed Projects' },
-  { value: '99.9%', label: 'Attention to Detail' },
-  { value: '24/7', label: 'Availability' }
+  { value: '3+', label: 'Years Experience', icon: 'fas fa-code' },
+  { value: '15+', label: 'Completed Projects', icon: 'fas fa-laptop-code' },
+  { value: '9+', label: 'Credentials Earned', icon: 'fas fa-award' },
+  { value: '100%', label: 'Passion & Focus', icon: 'fas fa-fire-alt' }
 ]
 
 // Projects dataset
@@ -241,6 +253,7 @@ const skills = ref({
     'VS Code',
     'Android Studio',
     'Postman',
+    'Cisco Packet Tracer',
     'XAMPP'
   ],
 
@@ -250,7 +263,7 @@ const skills = ref({
     'Laravel Sanctum',
     'Firebase',
     'Responsive UI',
-    'Basic Networking',
+    'CCNA Networking',
     'IT Support',
     'Software Support'
   ]
@@ -317,6 +330,36 @@ const certificates = ref([
     image: certJavaEtec,
     skills: ['Java', 'MySQL', 'iReport', 'OOP', 'Backend Development'],
     description: 'Successfully completed computer training courses in Basic & Advanced Java, MySQL database management, iReport, and Project Courses.'
+  },
+  {
+    id: 7,
+    title: 'CCNA: Enterprise Networking, Security, and Automation',
+    issuer: 'Cisco Networking Academy | Royal University of Phnom Penh',
+    date: 'February 04, 2026',
+    credentialUrl: '#',
+    image: certCcnaEnterprise,
+    skills: ['Enterprise Networking', 'Network Security', 'OSPFv2', 'ACLs & NAT', 'Network Automation', 'Cisco IOS'],
+    description: 'Successfully completed the CCNA Enterprise Networking, Security, and Automation course covering large-scale network architecture, advanced security, OSPFv2, ACLs, NAT, VPNs, and network programmability/automation.'
+  },
+  {
+    id: 8,
+    title: 'CCNA: Switching, Routing, and Wireless Essentials',
+    issuer: 'Cisco Networking Academy | Royal University of Phnom Penh',
+    date: 'February 04, 2026',
+    credentialUrl: '#',
+    image: certCcnaSwitching,
+    skills: ['VLANs', 'Inter-VLAN Routing', 'STP & EtherChannel', 'DHCPv4 & SLAAC', 'WLAN', 'Routing Fundamentals'],
+    description: 'Successfully completed the CCNA Switching, Routing, and Wireless Essentials course focusing on configuring and troubleshooting switches, routers, VLANs, STP, EtherChannel, and WLANs in enterprise environments.'
+  },
+  {
+    id: 9,
+    title: 'CCNA: Introduction to Networks',
+    issuer: 'Cisco Networking Academy | Royal University of Phnom Penh',
+    date: 'August 11, 2025',
+    credentialUrl: '#',
+    image: certCcnaIntro,
+    skills: ['Network Fundamentals', 'IPv4 & IPv6 Addressing', 'Subnetting', 'Ethernet', 'Cisco IOS Configuration', 'Network Protocols'],
+    description: 'Successfully completed the CCNA Introduction to Networks course covering fundamental networking architectures, models, protocols, IPv4/IPv6 addressing, subnetting, and Cisco device configuration.'
   },
 
 ])
